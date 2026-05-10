@@ -21,7 +21,7 @@ const App = () => {
    fetch(API_URL)
    .then((res)=>res.json())
    .then((res)=>{
-    dispatch(handleData(res[0]))
+    dispatch(handleData(res))
     setLoading(false);
    })
    .catch((err)=>{
@@ -42,7 +42,8 @@ const App = () => {
         A short Naration of Lorem Ipsum
       </h1>
       <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
-      {loading ? (<Spinner/>):( <ul>
+      {loading ? (<Spinner/>):(datas.length>0 ? (
+       <ul>
            { 
         datas.map((el)=>(
           <li key={el.id}>
@@ -51,7 +52,10 @@ const App = () => {
           </li>
         ))
        }
-       </ul>)}
+       </ul>
+      ):(
+        <div>No Data Found</div>
+      ))}
        
     </div>
   )
