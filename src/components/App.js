@@ -38,14 +38,25 @@ const App = () => {
   
   return (
     <div>
-       {
+      <h1>
+        A short Naration of Lorem ipsum
+      </h1>
+      <h4>Below Contains A title and Body gotten from a random API, Please take your time to review</h4>
+      {loading ? (<Spinner/>):(datas.length>0 ? (
+       <ul>
+           { 
         datas.map((el)=>(
-          <div key={el.id}>
+          <li key={el.id}>
             <p><b>Title </b>{el.title}</p>
             <p><b>Body </b>{el.body}</p>
-          </div>
+          </li>
         ))
        }
+       </ul>
+      ):(
+        <div>No Data Found</div>
+      ))}
+       
     </div>
   )
 }
