@@ -2,8 +2,9 @@ import React from 'react'
 
 export default function Spinner() {
   return (
-    <div>
-        <div className='spinner'>Loading...</div>
-    </div>
+    <li>
+            <p className="title"><b>Title :</b>Loading Title</p>
+            <p className="body"><b>Body :</b>Loading Body</p>
+    </li>
   )
 }
