@@ -42,8 +42,7 @@ const App = () => {
         A short Naration of Lorem Ipsum
       </h1>
       <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
-      {loading ? (<Spinner/>):(datas.length>0 ? (
-       <ul>
+      {loading ? (<Spinner/>):( <ul>
            { 
         datas.map((el)=>(
           <li key={el.id}>
@@ -52,10 +51,7 @@ const App = () => {
           </li>
         ))
        }
-       </ul>
-      ):(
-        <div>No Data Found</div>
-      ))}
+       </ul>)}
        
     </div>
   )

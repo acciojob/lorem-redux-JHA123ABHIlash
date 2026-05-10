@@ -9,7 +9,7 @@ export const DataSlice=createSlice({
     initialState,
     reducers:{
         handleData:(state,action)=>{
-            state.data=(action.payload);
+            state.data.push(action.payload);
         }
     }
 })
