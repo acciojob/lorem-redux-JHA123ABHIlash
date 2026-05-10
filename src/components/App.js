@@ -47,8 +47,8 @@ const App = () => {
            { 
         datas.map((el)=>(
           <li key={el.id}>
-            <p className="title"><b>Title </b>{el.title}</p>
-            <p className="body"><b>Body </b>{el.body}</p>
+            <p className="title"><b>Title :</b>{el.title}</p>
+            <p className="body"><b>Body :</b>{el.body}</p>
           </li>
         ))
        }
