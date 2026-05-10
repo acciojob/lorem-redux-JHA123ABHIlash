@@ -21,7 +21,7 @@ const App = () => {
    fetch(API_URL)
    .then((res)=>res.json())
    .then((res)=>{
-    dispatch(handleData(res))
+    dispatch(handleData(res[0]))
     setLoading(false);
    })
    .catch((err)=>{
