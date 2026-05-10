@@ -39,16 +39,16 @@ const App = () => {
   return (
     <div>
       <h1>
-        A short Naration of Lorem ipsum
+        A short Naration of Lorem Ipsum
       </h1>
-      <h4>Below Contains A title and Body gotten from a random API, Please take your time to review</h4>
+      <h4>Below Contains A title and Body gotten froma random API, Please take your time to Review</h4>
       {loading ? (<Spinner/>):(datas.length>0 ? (
        <ul>
            { 
         datas.map((el)=>(
           <li key={el.id}>
-            <p><b>Title </b>{el.title}</p>
-            <p><b>Body </b>{el.body}</p>
+            <p className="title"><b>Title </b>{el.title}</p>
+            <p className="body"><b>Body </b>{el.body}</p>
           </li>
         ))
        }
