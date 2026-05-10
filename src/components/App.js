@@ -41,31 +41,18 @@ const App = () => {
           </h4>
       {loading ? (
         <li>
-          <p className="title">
-            <b>Title :</b>Loading Title
-          </p>
-          <p className="body">
-            <b>Body :</b>Loading Body
-          </p>
+          <p className="title"><b>Title :</b>Loading Title</p>
+          <p className="body"><b>Body :</b>Loading Body</p>
         </li>
       ) : (
-        
-
-          <ul>
+        <ul>
             {datas.map((el) => (
               <li key={el.id}>
-                <p className="title">
-                  <b>Title :</b>
-                  {el.title}
-                </p>
-                <p className="body">
-                  <b>Body :</b>
-                  {el.body}
-                </p>
+                <p className="title"><b>Title :</b>{el.title}</p>
+                <p className="body"><b>Body :</b>{el.body}</p>
               </li>
             ))}
           </ul>
-       
       ) }
     </div>
   );
